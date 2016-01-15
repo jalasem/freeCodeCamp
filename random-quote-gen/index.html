@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Random Quote Generator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery-2.1.4.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Jose Mourinho Quote Generator</h1>
+		<p class="intro">This is a collection of some of the best Mourinho quotes ever. Just click the button below to summon a new quote.</p>
+		<div class="wrapper">
+			<input type="submit" name="generate" value="Next Quote" class="btn" id="btn-generate">
+		</div>
+		
+	</div>
+
+	<div id="quotes">
+			
+	</div>
+
+	<script type="text/javascript">
+
+		var randomQuote = ["<span>On taking over at Chelsea for the first time in 2004:</span> I have top players and, I'm sorry, we have a top manager. Please do not call me arrogant because what I say is true. I'm European champion, I'm not one out of the bottle, I think I'm a special one.", "<span>On pressure:</span> For me, pressure is bird flu. I'm feeling a lot of pressure with the problem in Scotland. It's not fun and I'm more scared of it than football.", "<span>On Arsenal rival Arsene Wenger:</span> I think he is one of these people who is a voyeur. He likes to watch other people. There are some guys who, when they are at home, have a big telescope to see what happens in other families. He speaks, speaks, speaks about Chelsea.", "<span>On the media:</span> When I go to the press conference before the game, in my mind the game has already started.", "<span>On Cristiano Ronaldo:</span> I had just one problem with Cristiano, very simple, very basic and it's from a tactical aspect that I noticed, which I brought up in order to improve upon and make him better. And at that moment he didn't take it very well because maybe he thinks he knows everything and the coach cannot help him to develop more.", "<span>On his managerial philosophy:</span> I would rather play with 10 men than wait for a player who is late for the bus.", "<span>On being sacked:</span> If the club decide to sack me because of bad results that's part of the game. If it happens I will be a millionaire and get another club a couple of months later.", "<span>On Luiz Felipe Scolari's Stamford Bridge sacking in 2009:</span> Why have Chelsea suffered so much since I left? Because I left.", "<span>On Rafael Benitez's wife:</span> The only club where her husband replaced me was at Inter Milan, where in six months he destroyed the best team in Europe at the time. And for her also to think about me and to speak about me, I think the lady needs to occupy her time, and if she takes care of her husband's diet she will have less time to speak about me.", "<span>On movies:</span> If they made a film of my life, I think they should get George Clooney to play me. He’s a fantastic actor and my wife thinks he would be ideal.", "<span>On young footballers:</span> Young players are like melons. Only when you open and taste the melon are you 100% sure that the melon is good.", "<span>On his new short haircut:</span> I want to push the young players on my team to have a proper haircut, not the Rastafarian or the others they have.", "<span>After losing 1-3 against Liverpool in 2015:</span> I have nothing, nothing to say. Nothing, nothing to say. Nothing to say, I have nothing to say. Nothing to say, I am so sorry, I have nothing to say.", "<span>On conspiracy in the Premier League:</span> The circumstances are difficult for us with the new football rules that we have to face. It is not possible to have a penalty against Manchester United and it is not possible to have penalties in favour of Chelsea. It is not a conspiracy, it is fact. I speak facts. If not, I need big glasses.", "<span>After drawing 0-0 in his competitive debut at Real Madrid:</span> Look, I’m a coach. I’m not Harry Potter. Harry Potter is magical, but in reality there is no magic. Magic is fiction and football is real.", "<span>On Squad Rotation:</span> If you have at home one Bentley and one Aston Martin, if you go all day everyday in the Bentley and leave the Aston Martin in the garage you are a bit stupid.", "<span>On Porto coach Jesualdo Ferreira in 2005:</span> The one with 30 years experience has never won anything; the one with three years has won a lot. The one with a 30-year career will be forgotten when he ends it; the one with three could end it right now and he could never be erased from history. This could be the story of a donkey who worked for 30 years but never became a horse.", "<span>After Chelsea drew 0-0 with Spurs in 2004:</span> As we say in Portugal, they brought the bus and they left the bus in front of the goal. I would have been frustrated if I had been a supporter who paid £50 to watch this game because Spurs came to defend. There was only one team looking to win, they only came not to concede; it's not fair for the football we played.", "<span>On Chelsea in his first stint</span>: I am not concerned about how Chelsea are viewed morally.What does concern me is that we are treated in a different way to other clubs. Some clubs are treated as devils, some are treated as angels. I don't think we are so ugly that we should be seen as the devil and I don’t think Arsene Wenger [and Co.] are so beautiful that they should be viewed as angels.", "<span>After an Icelandic volcano eruption in 2010 forced Barcelona to take a coach to Milan, the then Inter boss said: </span>The way they are, tomorrow we will probably read I am to blame for the volcano. Maybe I have a friend in the volcano and I am responsible for that.", "<span>On playing Benzema due to Higuain's Injury:</span> If you go hunting with a good dog, you hunt more. If you go with a cat, you hunt less but you're still hunting.", "<span>On losing to Barcelona in 2006:</span> When I saw Frank Rijkaard (then Barcelona coach) entering the referee’s dressing room I couldn’t believe it. When Didier Drogba was sent off (after half-time) I wasn’t surprised", "<span>On Frank Rijkaard:</span> My history as a manager cannot be compared with Frank Rijkaard's history. He has zero trophies and I have a lot of them", "<span>On Rafa Benitez winning the club world cup with Inter:</span> I thought he was going to thank me for the title I gave him. Inter fans would tell you how they really feel about it.", "<span>On interest in Pogba:</span> I think everybody has an interest in Pogba. But there are things you can do and things you cannot do. I love the Eiffel Tower but I can’t have the Eiffel Tower in my garden. I can't even have the Eiffel Tower of Las Vegas.", "<span>On Bayern Munich after they lost to Inter in the final of the Champions League despite having 67% possession:</span> They can have the ball, we will keep the trophy!", "<span>On Cristiano Ronaldo in 2013:</span> I was manager for the first time in the 2000 year but, before that, I was assistant in big clubs and with big managers and coaching the best players in the world, so I was 30 and I was coaching Ronaldo, not this one [Cristiano], the real one, the Brazilian Ronaldo."];
+
+		$(document).ready(function () {
+			var random = Math.floor((Math.random() * ((randomQuote.length - 1) - 0 + 1) + 1));
+     		$("#quotes").append("<div class=\"quote-box\"><p>"+ randomQuote[random] + "<p></div>");
+
+     	
+	     	$("#btn-generate").click(function(){
+				var random = Math.floor((Math.random() * (randomQuote.length - 1) ));
+				$("#quotes").empty();
+	     		$("#quotes").append("<div class=\"quote-box\"><p>"+ randomQuote[random] + "<p></div>");
+			});
+		
+		});
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+//@import "compass/reset";
+
+body {
+	background: url("mou-1.jpg") repeat;
+	background-position: 0% 0%;
+	color: #333;
+	font-family: "Lato", sans-serif;
+	text-align: center;
+}
+
+@media only screen and (max-width: 720px) {
+	.container {
+		width: 100% !important;
+		max-width: 768px;
+    
+    h1 {
+      font-size: 3em !important;
+      text-align: center !important;
+    }
+    
+    .intro {
+      font-size: 0.75em;
+    }
+    
+    .btn {
+      width: 70% !important;
+      font-size: 1em;
+    }
+    
+	}
+  
+  #quotes {
+	  max-width: 90%;	
+	}
+
+}
+
+//Desktop Styles
+
+.container {
+	width: 50%;
+	margin: 30px auto 0px;
+	background-color: #fff;
+
+	h1 {
+		font-size: 3em;
+	}
+
+	.intro {
+		padding: 0.2em 1em;
+		font-size: 1.5em;
+	}
+
+	.btn {
+		width: 200px;
+		height: 70px;
+		margin: 0.2em 0.5em 1em;
+		font-size: 1.5em;
+		color: #fff;
+		background-color: #333;
+		border: none;
+		border-radius: 20px;
+	}
+
+	.btn:hover {
+		color: #fff;
+		background-color: #0f63ff;
+	}	
+	
+}
+
+#quotes {
+		@extend .container;
+		margin: 20px auto 0px;
+		background-color: #ffbc00;
+		color: #333;
+		
+		.quote-box {
+		padding: 20px 10px;
+		font-size: 20px;
+		border-radius: 20px;
+		font-family: "Open Sans", sans-serif;
+
+		span {
+			font-weight: 900;
+			color: #0f63ff;
+		}
+	}
+}
