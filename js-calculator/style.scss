@@ -1,0 +1,21 @@
+@import "compass/reset";
+
+//Global
+
+body {
+	background-color: #ccc;
+}
+
+.main {
+	background-color: #fff;
+	width: 500px;
+	height: 500px;
+	margin: 3em auto;
+}
+
+
+//Buttons
+
+.calc-btn-row {
+	display: inline-block;
+}

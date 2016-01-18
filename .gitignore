@@ -1,0 +1,11 @@
+#Don't track files endingwith .map
+*.map
+
+#Don't track sass cache	
+
+/**/.sass-cache/
+
+#Don't track Jquery file. Will use Google CDN for production
+
+/**/jquery-2.1.4.js
+
