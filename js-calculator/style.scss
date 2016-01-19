@@ -14,8 +14,48 @@ body {
 }
 
 
+	.output {
+		position: absolute;
+		width: 500px;
+		height: 75px;
+		margin-top: 175px;
+		border-top: 1px solid #ccc;
+	}
+
 //Buttons
 
-.calc-btn-row {
-	display: inline-block;
+.buttons {
+	background-color: #0fc9ff;
+	background-position: cover;
+	background-size: cover;
+	position: absolute;
+	margin-top: 250px;
+	font-size: 35px;
+	width: 500px;
+	height: 250px;
+	overflow: hidden;
+	
 }
+
+	.calc-btn-row {
+		display: inline-block;
+		display: table-row;
+	}
+
+		.calc-btn {
+			display: inline-block;
+			width: 75px;
+			height: 55px;
+			background-color: #0fc9ff;
+			border: 1px solid #333;
+			text-align: center;
+			margin: 2px;
+			box-sizing: border-box;
+			cursor: default;
+			-webkit-appearance:button;
+		}
+
+		.mod-btn {
+			width: 155px;
+		}
+
