@@ -3,59 +3,82 @@
 //Global
 
 body {
-	background-color: #ccc;
+	background-color: #fff;
 }
 
 .main {
-	background-color: #fff;
-	width: 500px;
-	height: 500px;
+	position: relative;
+	background-color: #ccc;
+	width: 400px;
+	height: 400px;
 	margin: 3em auto;
 }
 
+	.headline {
+		height: 50px;
+		font-size: 2em;
+		text-align: center;
+	}
 
-	.output {
+	.container {
+		border: 1px solid #333;
+		width: 350px;
+		height: 320px;
+		margin: 0px auto;
+	}
+
+
+		.output {
+			color: #333;
+			position: absolute;
+			width: 350px;
+			height: 50px;
+			margin-top: 90px;
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+		}
+
+	//Buttons
+
+	.buttons {
+		background-size: cover;
 		position: absolute;
-		width: 500px;
-		height: 75px;
-		margin-top: 175px;
-		border-top: 1px solid #ccc;
+		margin: 145px auto 0px;
+		font-size: 20px;
+		width: 350px;
+		height: 170px;
+		padding: 10px;
+		overflow: hidden;
+		
 	}
 
-//Buttons
-
-.buttons {
-	background-color: #0fc9ff;
-	background-position: cover;
-	background-size: cover;
-	position: absolute;
-	margin-top: 250px;
-	font-size: 35px;
-	width: 500px;
-	height: 250px;
-	overflow: hidden;
-	
-}
-
-	.calc-btn-row {
-		display: inline-block;
-		display: table-row;
-	}
-
-		.calc-btn {
+		.calc-btn-row {
 			display: inline-block;
-			width: 75px;
-			height: 55px;
-			background-color: #0fc9ff;
-			border: 1px solid #333;
-			text-align: center;
-			margin: 2px;
-			box-sizing: border-box;
-			cursor: default;
-			-webkit-appearance:button;
+			display: table-row;
 		}
 
-		.mod-btn {
-			width: 155px;
-		}
+			.calc-btn {
+				display: inline-block;
+				width: 50px;
+				height: 35px;
+				background-color: #333;
+				color: #fff;
+				border: 1px solid #333;
+				border-radius: 3px;
+				text-align: center;
+				margin: 2px;
+				box-sizing: border-box;
+				cursor: default;
+				line-height: 35px;
+			}
+
+			.calc-btn:hover {
+				color: #333;
+				background-color: #D9FF0F;
+				border: 1px solid #D9FF0F;
+			}
+
+			.mod-btn {
+				width: 103px;
+			}
 
