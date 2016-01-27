@@ -1,9 +1,21 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8" content="JavaScript Calculator">
 	<title>JavaScript Calculator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<style>
+		@-moz-document url-prefix() {
+			.calc-btn {
+				width: 45px;
+			}
+
+			.mod-btn {
+				width: 100px;
+			}
+		}
+	</style>
 </head>
 <body>
 	
@@ -31,7 +43,7 @@
 						<li class="calc-btn" id="btn-eight">8</li>
 						<li class="calc-btn" id="btn-nine">9</li>
 						<li class="calc-btn" id="btn-divide">/</li>
-						<li class="calc-btn mod-btn" id="btn-clear">clear</li>
+						<li class="calc-btn mod-btn clear" id="btn-clear">clear</li>
 					</ul>
 
 					<ul class="calc-btn-row" id="calc-btn-row-3">
@@ -55,9 +67,9 @@
 					<ul class="calc-btn-row" id="calc-btn-row-1">
 						<li class="calc-btn" id="btn-zero">0</li>
 						<li class="calc-btn" id="btn-dot">.</li>
-						<li class="calc-btn" id="btn-percent">%</li>
+						<li class="calc-btn" id="btn-pie">pi</li>
 						<li class="calc-btn" id="btn-add">+</li>
-						<li class="calc-btn mod-btn" id="btn-equals">=</li>
+						<li class="calc-btn mod-btn equals" id="btn-equals">=</li>
 					</ul>
 
 				</div>

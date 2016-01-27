@@ -28,69 +28,78 @@ body {
 	}
 
 		.history {
+			background-color: #fff;
 			width: 350px;
 			height: 90px;
 			padding: 0px;
-			overflow-y: scroll; 
+			line-height: 20px;
+			overflow: auto; 
 		}
 
 			.history span {
+				font-weight: bold;
 				float: right;
 			}
-			.output {
-				color: #333;
-				position: absolute;
-				width: 350px;
-				height: 50px;
-				margin-top: 0px;
-				border-top: 1px solid #333;
-				border-bottom: 1px solid #333;
-				text-align: right;
-				font-size: 30px;
-				line-height: 50px;
-			}
+
+		.output {
+			color: #333;
+			position: absolute;
+			width: 350px;
+			height: 50px;
+			margin-top: 0px;
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+			text-align: right;
+			font-size: 30px;
+			line-height: 50px;
+			background-color: #fff;
+		}
 
 	//Buttons
 
-	.buttons {
-		background-size: cover;
-		position: absolute;
-		margin: 50px auto 0px;
-		font-size: 20px;
-		width: 350px;
-		height: 170px;
-		padding: 10px;
-		overflow: hidden;
-		
-	}
-
-		.calc-btn-row {
-			display: inline-block;
-			display: table-row;
+		.buttons {
+			background-size: cover;
+			position: absolute;
+			margin: 50px auto 0px;
+			font-size: 20px;
+			width: 350px;
+			height: 170px;
+			padding: 10px;
+			//overflow: hidden;
+			
 		}
 
-			.calc-btn {
+			.calc-btn-row {
 				display: inline-block;
-				width: 50px;
-				height: 35px;
-				background-color: #333;
-				color: #fff;
-				border: 1px solid #333;
-				border-radius: 3px;
-				text-align: center;
-				margin: 2px;
-				box-sizing: border-box;
-				cursor: pointer;
-				line-height: 35px;
+				display: table-row;
 			}
 
-			// .calc-btn:hover {
-			// 	color: #333;
-			// 	background-color: #D9FF0F;
-			// 	border: 1px solid #D9FF0F;
-			// }
+				.calc-btn {
+					display: inline-block;
+					width: 50px;
+					height: 35px;
+					background-color: #FFF5FE;
+					color: #555;
+					border: 1px solid #333;
+					border-radius: 3px;
+					text-align: center;
+					margin: 2px;
+					box-sizing: border-box;
+					cursor: pointer;
+					line-height: 35px;
+				}
 
-			.mod-btn {
-				width: 103px;
-			}
+				.mod-btn {
+					width: 103px;
+					color: #fff;				}
+
+				.mod-btn.equals {
+					background-color: #0faaff;
+					border: 1px solid #0faaff;
+				}
+
+				.mod-btn.clear {
+					background-color: #ff220f;
+					border: 1px solid #ff220f;
+				}
 

@@ -4,89 +4,95 @@ $(document).ready(function () {
 	var joined;
 	var sum;
 
-	$("#btn-seven").click(function () {
-		operation.push(7);		
-	});
+	if (operation.length <= 22) {
 
-	$("#btn-eight").click(function () {
-		operation.push(8);		
-	});
+		$("#btn-seven").click(function () {
+			operation.push(7);	
+						
+		});
 
-	$("#btn-nine").click(function () {
-		operation.push(9);		
-	});
+		$("#btn-eight").click(function () {
+			operation.push(8);		
+		});
 
-	$("#btn-divide").click(function () {
-		operation.push("\/");	
-	});
+		$("#btn-nine").click(function () {
+			operation.push(9);		
+		});
 
-	//Second Row
+		$("#btn-divide").click(function () {
+			operation.push("\/");	
+		});
 
-	$("#btn-four").click(function () {
-		operation.push(4);		
-	});
+		//Second Row
 
-	$("#btn-five").click(function () {
-		operation.push(5);		
-	});
+		$("#btn-four").click(function () {
+			operation.push(4);		
+		});
 
-	$("#btn-six").click(function () {
-		operation.push(6);		
-	});
+		$("#btn-five").click(function () {
+			operation.push(5);		
+		});
 
-	$("#btn-multiply").click(function () {
-		operation.push("\*");		
-	});
+		$("#btn-six").click(function () {
+			operation.push(6);		
+		});
 
-	$("#btn-bracket-open").click(function () {
-		operation.push("\(");	
-	});
+		$("#btn-multiply").click(function () {
+			operation.push("\*");		
+		});
 
-	$("#btn-bracket-close").click(function () {
-		operation.push("\)");		
-	});
+		$("#btn-bracket-open").click(function () {
+			operation.push("\(");	
+		});
 
-	//Third Row
+		$("#btn-bracket-close").click(function () {
+			operation.push("\)");		
+		});
 
-	$("#btn-one").click(function () {
-		operation.push(1);		
-	});
+		//Third Row
 
-	$("#btn-two").click(function () {
-		operation.push(2);		
-	});
+		$("#btn-one").click(function () {
+			operation.push(1);		
+		});
 
-	$("#btn-three").click(function () {
-		operation.push(3);		
-	});
+		$("#btn-two").click(function () {
+			operation.push(2);		
+		});
 
-	$("#btn-minus").click(function () {
-		operation.push("\-");	
-	});
+		$("#btn-three").click(function () {
+			operation.push(3);		
+		});
 
-	$("#btn-sqr").click(function () {
-		operation.push("");		
-	});
+		$("#btn-minus").click(function () {
+			operation.push("\-");	
+		});
 
-	$("#btn-sqrt").click(function () {
-		operation.push("");		
-	});
+		$("#btn-sqr").click(function () {
+			operation.push("");		
+		});
 
-	$("#btn-zero").click(function () {
-		operation.push(0);		
-	});
+		$("#btn-sqrt").click(function () {
+			var findsqrt = [];
+			operation.push(Math.SQRT);		
+		});
 
-	$("#btn-dot").click(function () {
-		operation.push("\.");		
-	});
+		$("#btn-zero").click(function () {
+			operation.push(0);		
+		});
 
-	$("#btn-percent").click(function () {
-		operation.push("\%");	
-	});
+		$("#btn-dot").click(function () {
+			operation.push("\.");		
+		});
 
-	$("#btn-add").click(function () {
-		operation.push("\+");		
-	});
+		$("#btn-pie").click(function () {
+			operation.push(Math.PI);	
+		});
+
+		$("#btn-add").click(function () {
+			operation.push("\+");		
+		});
+
+	}
 
 	//Clear and Equals
 
