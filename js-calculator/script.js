@@ -25,17 +25,29 @@ $(document).ready(function () {
 	});	
 
 	$("#btn-equals").click(function () {
-			var answer = eval(joined);
+
+		var answer;
+
+		try {
+			answer = eval(joined);
 			$(".output").empty().html("<p>" + answer + "</p>");
 			$(".history").append("<p>" + joined  + "<span>" + " = "  + answer + "</span>" + "</p>");
 			console.log(answer);
 			operation = [answer];
-		
+		}
+
+		catch (e) {
+			answer = "Error";
+			$(".output").html(answer);
+			operation = [];
+		}
+
 	});
 
 	$("#btn-clear").click(function () {
 		$(".output").empty();
 		operation = [];
 	});
+
 
 });
