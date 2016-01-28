@@ -56,6 +56,7 @@ body {
   margin: 3em auto; }
 
 .headline {
+  padding-top: 5px;
   height: 50px;
   font-size: 2em;
   text-align: center; }
@@ -119,13 +120,11 @@ body {
   cursor: pointer;
   line-height: 35px; }
 
-.mod-btn {
-  width: 292px;
-  color: #fff; }
-
 .mod-btn.equals {
   background-color: #0faaff;
-  border: 1px solid #0faaff; }
+  border: 1px solid #0faaff;
+  width: 292px;
+  color: #fff; }
 
 .clear {
   color: #fff;
