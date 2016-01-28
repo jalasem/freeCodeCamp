@@ -52,7 +52,7 @@ body {
   position: relative;
   background-color: #ccc;
   width: 400px;
-  height: 400px;
+  height: 470px;
   margin: 3em auto; }
 
 .headline {
@@ -63,13 +63,13 @@ body {
 .container {
   border: 1px solid #333;
   width: 350px;
-  height: 320px;
+  height: 390px;
   margin: 0px auto; }
 
 .history {
   background-color: #fff;
   width: 350px;
-  height: 90px;
+  height: 120px;
   padding: 0px;
   line-height: 20px;
   overflow: auto; }
@@ -82,31 +82,32 @@ body {
   color: #333;
   position: absolute;
   width: 350px;
-  height: 50px;
+  height: 60px;
   margin-top: 0px;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   text-align: right;
   font-size: 30px;
-  line-height: 50px;
-  background-color: #fff; }
+  line-height: 45px;
+  background-color: #fff;
+  overflow: auto; }
 
 .buttons {
   background-size: cover;
   position: absolute;
-  margin: 50px auto 0px;
+  margin: 60px auto 0px;
   font-size: 20px;
   width: 350px;
-  height: 170px;
-  padding: 10px; }
+  height: 200px;
+  padding: 10px 25px; }
 
 .calc-btn-row {
   display: inline-block;
   display: table-row; }
 
-.calc-btn {
+.calc-btn, .function-btn {
   display: inline-block;
-  width: 50px;
+  width: 70px;
   height: 35px;
   background-color: #FFF5FE;
   color: #555;
@@ -119,14 +120,15 @@ body {
   line-height: 35px; }
 
 .mod-btn {
-  width: 103px;
+  width: 292px;
   color: #fff; }
 
 .mod-btn.equals {
   background-color: #0faaff;
   border: 1px solid #0faaff; }
 
-.mod-btn.clear {
+.clear {
+  color: #fff;
   background-color: #ff220f;
   border: 1px solid #ff220f; }
 
