@@ -106,7 +106,7 @@ body {
   display: inline-block;
   display: table-row; }
 
-.calc-btn, .function-btn {
+.calc-btn, .operator-btn, .function-btn {
   display: inline-block;
   width: 70px;
   height: 35px;

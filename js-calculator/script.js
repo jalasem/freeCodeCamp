@@ -4,29 +4,30 @@ $(document).ready(function () {
 	
 	var operation = [];
 	var joined;
-	var sum;
+	var answer;
 
-	//Regular Buttons
+	//Regular Buttons and Operators
 
 	$(".calc-btn").click(function () {
+		if (operation.join("") == answer) {
+			operation = [];
+		}
+	});
+
+	$(".calc-btn, .operator-btn").click(function () {
 		operation.push($(this).text());
-		console.log(operation);
 		joined = operation.join("");
-		console.log(joined);
 		$(".output").html("<p>" + joined + "</p>");
 	});
 
-	//Clear and Equal to
+	//Clear and Equals to
 
 	$("#btn-equals").click(function () {
-
-		var answer;
 
 		try {
 			answer = eval(joined).toFixed(2);
 			$(".output").empty().html("<p>" + answer + "</p>");
 			$(".history").append("<p>" + joined  + "<span>" + " = "  + answer + "</span>" + "</p>");
-			console.log(answer);
 			operation = [answer];
 		}
 
