@@ -1,44 +1,57 @@
+//Reset all browser styles
+
 @import "compass/reset";
+
+//Mixins
+
+@mixin absoluteCenter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+@mixin btn-styles {
+	width: 200px;
+	height: 40px;
+	text-align: center;
+}
 
 //
 
 body {
-	background-color: #fff;
-}
-
-.main {
-	position: relative;
-	margin: 25px auto;
 	background-color: #ccc;
-	width: 500px;
-	height: 500px;
 }
 
-	.headline {
-		padding-top: 5px;
-		height: 50px;
-		font-size: 2em;
+	.session-length .btn {
+		width: 70px;
+		height: 30px;
+		text-align: center;	
+		margin-top: 10px;
+	}
+
+	.clock {
+		width: 500px;
+		height: 150px;
+		@include absoluteCenter;
 		text-align: center;
 	}
 
-	.container {
-		border: 1px solid #333;
-		width: 450px;
-		height: 400px;
-		margin: 0px auto;
+	.clock-timer {
+		font-size: 7em;
+	}
+
+	.session-length {
+		width: 500px;
+		font-size: 2em;
+		margin: 100px auto;
+		text-align: center;
+	}
+
+	.btn-control {
+		margin-top: 120px;
+		@include btn-styles; 
 	}
 	
-			.clock-timer {
-				width: 250px;
-				height: 250px;
-				background-color: #ccc;
-				margin: 50px auto;
-				border: 1px solid #333;
-				border-radius: 50%; 
-			}
-
-			.start-pomodoro {
-				width: 150px;
-				height: 50px;
-				text-align: center;
-			}

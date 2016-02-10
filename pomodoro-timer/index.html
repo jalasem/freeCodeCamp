@@ -5,37 +5,46 @@
 	<title>JavaScript Pomodoro Clock</title>
 
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="jquery-2.1.4.js"></script>
 </head>
 <body>
 	
+	<!-- User Stories for Pomodoro Clock
+	
+	1. I can start a 25 minute pomodoro and the timer will go off after 25 minutes
+	2. I can reset the clock for my next pomodoro
+	3. I can customise the length of each pomodoro
+	
+	 -->
+
 	<div class="main">
 		
-		<header class="headline">
-			<h1>Pomodoro Timer</h1>
-		</header>
-
 		<div class="container">
 			
+			<div class="session-length">
+					<p>Session Length</p>
+					<button class="btn">+</button>
+					<span>25</span>
+					<button class="btn">-</button>
+			</div>
+
 			<section class="clock">
 
-				<div class="clock-timer">
-					
-					<span class="minutes"></span>:<span class="seconds"></span>
+				<div class="clock-timer" id="clock-timer">
+					<span class="minutes">25</span>:<span class="seconds">00</span>
+				</div>
 
-				</div>				
+				<div class="options">
+					<button class="btn btn-control start-pomodoro">Start Pomodoro</button>
+					<button class="btn btn-control reset">Reset</button>
+				</div>			
 
-			</section>
-
-			<section class="options">
-				<button class="start-pomodoro">Start Pomodoro</button>				
-			</section>
+			</section>			
 
 		</div>
 
 	</div>
 	
-	<script type="text/javascript" src="jquery-2.1.4.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<!-- <script type="text/javascript" src="jquery-2.1.4.js"></script>
+	// <script type="text/javascript" src="script.js"></script> -->
 </body>
 </html>
