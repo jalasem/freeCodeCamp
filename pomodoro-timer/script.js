@@ -1,34 +1,85 @@
-var pomodoro = 25;
-var currentTime = Date.parse(new Date());
-var deadline = new Date(currentTime + pomodoro * 60 * 1000);
+$(document).ready(function () {
 
-	function timeLeft (end) {
-		var t = Date.parse(end) - currentTime;
-		var seconds = Math.floor( (t/1000) % 60);
-		var minutes = Math.floor( (t/1000/60) % 60);
+	//Set global variables
 
-		return {
-			"total": t,
-			"minutes": minutes,
-			"seconds": seconds
-		};
-	}
+	var pomodoro = 25, currentTime = Date.parse(new Date()), deadline, timeInterval;
 
-	function startPomodoro (id, end) {
+	//Display the clock
 
-		function updatePomodoro () {
-			var time = timeLeft(end);
+	var clock = document.getElementById("clock-timer");
+	var minutesSpan = clock.querySelector(".minutes");
+	var secondsSpan = clock.querySelector(".seconds");
 
-			var minutesRemaining = $(".minutes").html(("0" + time.minutes).slice(-2));
-			var secondsRemaining = $(".seconds").html(("0" + time.seconds).slice(-2));
+	$(".minutes-count").html(pomodoro);
+	minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
+	secondsSpan.innerHTML = "00";
 
-			// if (time.total <= 0) {// If the deadline is reached, stop the timer
-			// 	clearInterval(timeInterval);
-			// }
+	//Customise length of each pomodoro
+
+	$("#plus-btn").click(function () {
+		pomodoro = pomodoro + 1;
+		$(".minutes-count").html(pomodoro);
+		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
+	});
+
+	$("#minus-btn").click(function () {
+		pomodoro = pomodoro - 1;
+		$(".minutes-count").html(pomodoro);
+		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
+	});
+
+	//Start the clock
+
+	$(".start-pomodoro").click(function() {
+
+		$("#plus-btn, #minus-btn").prop("disabled", true); //Disable session customisation buttons
+		deadline = new Date(Date.parse(new Date()) + (pomodoro * 60 * 1000)); //Set deadline
+
+		//Calculate the time remaining
+		
+		function getTimeLeft (end) {
+			var total = Date.parse(end) - Date.parse(new Date());
+			var seconds = Math.floor((total/1000) % 60);
+			var minutes = Math.floor((total/1000/60) % 60);
+
+			return {
+				"total": total,
+				"minutes": minutes,
+				"seconds": seconds
+			};
 		}
 
-		updatePomodoro();
-		var timeinterval = setInterval(updatePomodoro, 1000);
+		//Countdown
+
+		function startClock () {
+			timeInterval = setInterval(function () {
+				var t = getTimeLeft(deadline);
+				minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+				secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+
+				if (t.total <= 0) { //If timer reaches zero, stop the timer and reset the clock
+					clearInterval(timeInterval);
+					resetClock();
+				}
+
+			}, 1000);
+		}
+
+		startClock();
+	});
+
+	//Reset the clock
+	
+	function resetClock () {
+		$("#plus-btn, #minus-btn").prop("disabled", false);
+		clearInterval(timeInterval);
+		$(".minutes-count").html(pomodoro);
+		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
+		secondsSpan.innerHTML = "00";
 	}
 
-	$(".start-pomodoro").click(startPomodoro("clock-timer", deadline));
+	$(".reset").click(function () {
+		resetClock();
+	});
+		
+});
