@@ -122,7 +122,7 @@ $(document).ready(function () {
 		$(".start-pomodoro, .break, .session-length").removeClass('hidden');
 		$(".reset").addClass('hidden');
 		$(".minutes-count").html(pomodoro);
-		$("title").html("Pomodoro")
+		$("title").html("Pomodoro");
 		clearInterval(timeInterval);
 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
 		secondsSpan.innerHTML = "00";

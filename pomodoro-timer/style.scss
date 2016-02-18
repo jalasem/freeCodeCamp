@@ -69,6 +69,7 @@ body {
 		height: 150px;
 		@include absoluteCenter;
 		text-align: center;
+		cursor: pointer;
 	}
 
 	.clock-timer {
@@ -97,6 +98,7 @@ body {
 		@include btn-styles;
 		margin-left: 20px;
 		margin-right: 20px;
+		cursor: pointer;
 	}
 
 	.btn-control:hover {
@@ -106,7 +108,8 @@ body {
 
 	.btn-count {
 		@include btn-styles;
-		padding: 5px 10px; 
+		padding: 5px 10px;
+		cursor: pointer;
 	}
 
 	.reset:hover {
