@@ -48,6 +48,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   background-color: #F1C40F; }
 
+@media only screen and (max-width: 720px) {
+  .clock {
+    max-width: 100%; }
+
+  .clock-timer {
+    font-size: 7em !important; }
+
+  .session-length {
+    max-width: 100%;
+    font-size: 1.5em !important; }
+
+  .session-length .btn {
+    width: 30px !important;
+    height: 30px !important; }
+
+  .btn-control {
+    padding: 5px !important;
+    margin: 80px 5px !important; } }
 .session-length .btn {
   width: 70px;
   height: 30px;
