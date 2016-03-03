@@ -20,7 +20,7 @@ $(document).ready(function () {
 	$("#pomodoro-plus-btn").click(function () {
 		pomodoro++;
 		if (pomodoro > 60 ) {
-			pomodoro = 60;
+			pomodoro = 1;
 		}
 
 		$(".pomodoro-minutes-count").html(pomodoro);
@@ -30,7 +30,7 @@ $(document).ready(function () {
 	$("#pomodoro-minus-btn").click(function () {
 		pomodoro--;
 		if (pomodoro < 1) {
-			pomodoro = 1;
+			pomodoro = 60;
 		}
 		$(".pomodoro-minutes-count").html(pomodoro);
 		minutesSpan.innerHTML = ("0" + pomodoro).slice(-2);
@@ -41,7 +41,7 @@ $(document).ready(function () {
 	$("#break-plus-btn").click(function () {
 		breakTime++;
 		if (breakTime > 15) {
-			breakTime = 15;
+			breakTime = 1;
 		}
 		$(".break-minutes-count").html(breakTime);
 	});
@@ -49,7 +49,7 @@ $(document).ready(function () {
 	$("#break-minus-btn").click(function () {
 		breakTime--;
 		if (breakTime < 1) {
-			breakTime = 1;
+			breakTime = 15;
 		}
 		$(".break-minutes-count").html(breakTime);
 	});
