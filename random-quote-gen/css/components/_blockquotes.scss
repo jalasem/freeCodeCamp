@@ -1,0 +1,45 @@
+.quotesBox {
+	margin-top: 5em;
+	border: 1px solid #333;
+	height: 300px;
+}
+
+//Blockquotes
+
+blockquote {
+	position: relative;
+	margin-top: 1em;
+	padding: 30px 100px 70px;
+	text-align: center;
+	font-size: 30px;
+}
+
+blockquote::before , blockquote::after {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	font-size: 120px;
+	line-height: 1;
+}
+
+blockquote::before {
+	top: 0;
+	left: 0;
+	content: "\201C";
+}
+
+blockquote::after {
+	top: 0;
+	right: 0;
+	content: "\201D";
+}
+
+.author {
+	position: absolute;
+	clear: both;
+	float: right;
+	bottom: 0;
+	right: 0;
+	color: #555;
+	font-size: 20px;
+}

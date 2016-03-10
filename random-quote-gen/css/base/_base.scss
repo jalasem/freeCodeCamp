@@ -1,8 +1,8 @@
 body {
-	background-color: #FFB238;
+	background-color: rgb(220, 221, 224);
 }
 
-.main {
+.home {
 	margin: 25px auto 0;
 }
 
@@ -10,4 +10,8 @@ body {
 
 .hidden {
 	display: none;
+}
+
+a {
+	text-decoration: none;
 }
