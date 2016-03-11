@@ -1,9 +1,9 @@
 	//Declare global variables
 	
-	var africanQuotes = [];
+	var africanQuotes;
 	var bookQuotes; 
 	var sportsQuotes;
-	var startupQuotes = [];
+	var startupQuotes;
 	var lifeQuotes;
 	var relationshipQuotes;
 	var christianityQuotes;
@@ -13,7 +13,7 @@
 	
 	startupQuotes = [ 
 		{
-			quote: "If you make the Internet, live on the internet",  
+			quote: "If you make the Internet, live on the internet.",  
 			author: "Matthew Mullenweg, WordPress"
 		}, 
 		
@@ -93,17 +93,17 @@
 
 		{
 			quote: "One can get anything if he is willing to help enough others get what they want.",
-			author: "Zig Ziglar, Motivational Speaker and Author"
+			author: "Zig Ziglar, Motivational Speaker"
 		},
 
 		{
 			quote: "Brilliant thinking is rare, but courage is in even shorter supply than genius.",
-			author: "Peter Thiel, Zero to One: Notes on Start Ups, or How to Build the Future"
+			author: "Peter Thiel, Zero to One"
 		},
 
 		{
 			quote: "All failed companies are the same: they failed to escape competition.",
-			author: "Peter Thiel, Zero to One: Notes on Start Ups, or How to Build the Future"
+			author: "Peter Thiel, Zero to One"
 		},
 
 		{
@@ -501,7 +501,7 @@
 		},
 
 		{
-			quote: "The most important thing is to enjoy your life—to be happy—it's all that matters",
+			quote: "The most important thing is to enjoy your life—to be happy—it's all that matters.",
 			author: "Audrey Hepburn"
 		},
 
@@ -788,7 +788,7 @@
 
 	];
 
-	sportQuotes = [
+	sportsQuotes = [
 
 		{
 			quote: "It’s hard to beat a person who never gives up.",
@@ -1036,7 +1036,7 @@
 		},
 
 		{
-			quote: "I used to ask God to help me. Then I asked if I might help Him. I ended up by asking God to do His work though me.",
+			quote: "I used to ask God to help me. Then I asked if I might help Him. I ended up by asking God to do His work through me.",
 			author: "Hudson Taylor"
 		},
 
@@ -1047,5 +1047,98 @@
 
 	];
 
-	
-console.log(sportQuotes[24].author);
+$(document).ready(function () {
+
+	var x = startupQuotes;
+	var i = 0;
+	var m;
+
+	function firstQuote () {
+		$(".quote").html(x[0].quote);
+		$(".author").html("- " + x[0].author);
+		i = 1;
+	}
+
+	function nextQuote () {
+		$(".quote").html(x[i].quote);
+		$(".author").html("- " + x[i].author);
+	}
+
+	function previousQuote () {
+		$(".quote").html(x[m].quote);
+		$(".author").html("- " + x[m].author);
+
+	}
+
+	$("#nav-bar-books, #home-books").click(function () {
+		x = bookQuotes;
+	});
+
+	$("#nav-bar-relationships, #home-relationships").click(function () {
+		x = relationshipQuotes;
+	});
+
+	$("#nav-bar-african, #home-african").click(function () {
+		x = africanQuotes;
+	});
+
+	$("#nav-bar-sports, #home-sports").click(function () {
+		x = sportsQuotes;
+	});
+
+	$("#nav-bar-movies, #home-movie").click(function () {
+		x = movieQuotes;
+	});
+
+	$("#nav-bar-life, #home-life").click(function () {
+		x = lifeQuotes;
+	});
+
+	$("#nav-bar-christianity, #home-christianity").click(function () {
+		x = christianityQuotes;
+	});
+
+	$("#nav-bar-startups, #home-starups").click(function () {
+		x = startupQuotes;
+	});
+
+	$(".nav-bar-btn").click(function () {
+		firstQuote();
+	});
+
+	$("#nav-bar-home").click(function () {
+		$(".page").addClass('hidden');
+		$(".home").removeClass('hidden');
+	});
+
+	$(".title").click(function (){
+		$(".page").removeClass('hidden');
+		$(".home").addClass('hidden');
+		firstQuote();
+	});
+
+	//Buttons
+
+	$("#next-quote").click(function() {
+		nextQuote();
+		i++;
+		if (i >= x.length) {
+		i = 0;
+		}
+		console.log(m, i);
+	});
+
+	$("#previous-quote").click(function () {	
+		if (i <= 0) {
+			i = x.length;
+		}
+		m = i - 2;
+		if (m <= -1) {
+			m = x.length - 1;
+		}
+		previousQuote();
+		i--;
+		console.log(m, i);
+	});
+
+});

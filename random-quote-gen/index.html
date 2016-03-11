@@ -9,11 +9,11 @@
 </head>
 <body>
 
-	<div class="home hidden">
+	<div class="home">
 		
 		<div class="container">
-			<h1 class="headline">Random Quote Generator</h1>
-			<p class="intro">This is a random quote generator built with JavaScript. Just click on each section to view quotes on your favourite topic</p>
+			<h1 class="headline">Random Quote Machine</h1>
+			<p class="intro">This is a random quote generator built with JavaScript. Just click on each section to view quotes on your favourite topic.</p>
 		
 		</div>
 
@@ -26,8 +26,8 @@
 						<img src="images/img7.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Book Quotes</a></h4>
+					<div class="title" id="home-books">
+						<h4><span>Book Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -35,8 +35,8 @@
 						<img src="images/img8.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Relationship Quotes</a></h4>
+					<div class="title" id="home-relationships">
+						<h4><span>Relationship Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -44,8 +44,8 @@
 						<img src="images/img1.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Sports Quotes</a></h4>
+					<div class="title" id="home-sports">
+						<h4><span>Sports Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -53,8 +53,8 @@
 						<img src="images/img2.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Life Quotes</a></h4>
+					<div class="title" id="home-life">
+						<h4><span>Life Quotes</span></h4>
 					</div>
 				</div>
 			</div>
@@ -65,8 +65,8 @@
 						<img src="images/img3.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Movie Quotes</a></h4>
+					<div class="title" id="home-movie">
+						<h4><span>Movie Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -74,8 +74,8 @@
 						<img src="images/img4.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Startup Quotes</a></h4>
+					<div class="title" id="home-startup">
+						<h4><span>Startup Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -83,8 +83,8 @@
 						<img src="images/img5.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">African Quotes</a></h4>
+					<div class="title" id="home-african">
+						<h4><span>African Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
@@ -92,8 +92,8 @@
 						<img src="images/img6.png" alt="image">
 					</div>
 
-					<div class="title">
-						<h4><a href="">Christianity Quotes</a></h4>
+					<div class="title" id="home-christianity">
+						<h4><span>Christianity Quotes</span></h4>
 					</div>
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 		
 	</div> <!-- HomePage -->
 	
-	<div class="page">
+	<div class="page hidden">
 		
 		<!-- Navigation  -->
 
@@ -116,14 +116,15 @@
 			<div class="ten columns offset-by-one">
 				<nav class="nav-bar">
 					<ul class="nav-bar-menu">
-						<li class="nav-bar-btn"><a href="">Books</a></li>
-						<li class="nav-bar-btn"><a href="">Startups</a></li>
-						<li class="nav-bar-btn"><a href="">Relationships</a></li>
-						<li class="nav-bar-btn"><a href="">Sports</a></li>
-						<li class="nav-bar-btn"><a href="">Movies</a></li>
-						<li class="nav-bar-btn"><a href="">African</a></li>
-						<li class="nav-bar-btn"><a href="">Life</a></li>
-						<li class="nav-bar-btn"><a href="">Christianity</a></li>
+						<li class="nav-bar-btn" id="nav-bar-home"><span>Home</span></li>
+						<li class="nav-bar-btn" id="nav-bar-books"><span>Books</span></li>
+						<li class="nav-bar-btn" id="nav-bar-startups"><span>Startups</span></li>
+						<li class="nav-bar-btn" id="nav-bar-relationships"><span>Relationships</span></li>
+						<li class="nav-bar-btn" id="nav-bar-sports"><span>Sports</span></li>
+						<li class="nav-bar-btn" id="nav-bar-movies"><span href="">Movies</span></li>
+						<li class="nav-bar-btn" id="nav-bar-african"><span href="">African</span></li>
+						<li class="nav-bar-btn" id="nav-bar-life"><span href="">Life</span></li>
+						<li class="nav-bar-btn" id="nav-bar-christianity"><span href="">Christianity</span></li>
 					</ul>
 				</nav>
 			</div>
@@ -137,8 +138,8 @@
 			<div class="ten columns offset-by-one">
 				<div class="quotesBox" id="quotesBox">
 					<blockquote>
-						<span class="quote">One man practicing sportsmanship is far better than 50 preaching it.</span>
-						<span class="author"> - Knute Rockne</span>
+						<span class="quote"></span>
+						<span class="author"></span>
 					</blockquote>
 				</div>
 			</div>
@@ -152,6 +153,7 @@
 			<div class="eight columns offset-by-two">
 				<div class="cta" id="cta">
 					<button class="btn" id="next-quote">Next Quote</button>
+					<button class="btn" id="previous-quote">Previous Quote</button>
 					<button class="btn">Tweet!</button>
 				</div>
 			</div>
