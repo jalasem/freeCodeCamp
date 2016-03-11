@@ -1,7 +1,6 @@
 .quotesBox {
-	margin-top: 5em;
+	margin-top: 4em;
 	border: 1px solid #333;
-	height: 300px;
 }
 
 //Blockquotes
@@ -9,9 +8,9 @@
 blockquote {
 	position: relative;
 	margin-top: 1em;
-	padding: 30px 100px 70px;
+	padding: 30px 60px 70px;
 	text-align: center;
-	font-size: 30px;
+	font-size: 2em;
 }
 
 blockquote::before , blockquote::after {
@@ -41,5 +40,23 @@ blockquote::after {
 	bottom: 0;
 	right: 0;
 	color: #555;
-	font-size: 20px;
+	font-size: 0.7em;
+}
+
+@media screen and (max-width: 850px) {
+	blockquote::before, blockquote::after {
+		font-size: 2em;
+		width: 30px;
+		height: 30px;
+	}
+
+	blockquote {
+		padding: 10px 30px 70px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.quotesBox {
+		height: 350px;
+	}
 }
