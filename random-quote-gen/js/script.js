@@ -941,7 +941,7 @@
 		},
 
 		{
-			quote: "As long as you do things for God, you are a Hall of Famer in heaven's list.",
+			quote: "As long as you do things for God, you are a Hall of Famer in Heaven's list.",
 			author: "Rick Warren"
 		},
 
@@ -1049,9 +1049,14 @@
 
 $(document).ready(function () {
 
+	//Variables
+
 	var x = startupQuotes;
 	var i = 0;
 	var m;
+	var k;
+
+	//Functions
 
 	function firstQuote () {
 		$(".quote").html(x[0].quote);
@@ -1070,36 +1075,67 @@ $(document).ready(function () {
 
 	}
 
+	function activeState () {
+		$(".nav-bar-btn-span").removeClass('black-bottom-border');
+		$("#nav-bar-btn-" + k).addClass('black-bottom-border');
+	}
+
+	//Navigation
+
 	$("#nav-bar-books, #home-books").click(function () {
 		x = bookQuotes;
+		k = "books";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$("#nav-bar-relationships, #home-relationships").click(function () {
 		x = relationshipQuotes;
+		k = "relationships";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$("#nav-bar-african, #home-african").click(function () {
 		x = africanQuotes;
+		k = "african";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$("#nav-bar-sports, #home-sports").click(function () {
 		x = sportsQuotes;
+		k = "sports";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
-	$("#nav-bar-movies, #home-movie").click(function () {
+	$("#nav-bar-movies, #home-movies").click(function () {
 		x = movieQuotes;
+		k = "movies";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$("#nav-bar-life, #home-life").click(function () {
 		x = lifeQuotes;
+		k = "life";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$("#nav-bar-christianity, #home-christianity").click(function () {
 		x = christianityQuotes;
+		k = "christianity";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
-	$("#nav-bar-startups, #home-starups").click(function () {
+	$("#nav-bar-startups, #home-startups").click(function () {
 		x = startupQuotes;
+		k = "startups";
+		$("#page").attr('class', 'background-style-' + k);
+		activeState();
 	});
 
 	$(".nav-bar-btn").click(function () {
@@ -1107,15 +1143,16 @@ $(document).ready(function () {
 	});
 
 	$("#nav-bar-home").click(function () {
-		$(".page").addClass('hidden');
-		$(".home").removeClass('hidden');
+		$("#page").slideUp('slow');
+		$(".home").slideDown('slow');
 	});
 
 	$(".title").click(function (){
-		$(".page").removeClass('hidden');
-		$(".home").addClass('hidden');
+		$("#page").slideDown('slow');
+		$(".home").slideUp("slow");
 		firstQuote();
 	});
+
 
 	//Buttons
 
@@ -1123,9 +1160,8 @@ $(document).ready(function () {
 		nextQuote();
 		i++;
 		if (i >= x.length) {
-		i = 0;
+			i = 0;
 		}
-		console.log(m, i);
 	});
 
 	$("#previous-quote").click(function () {	
@@ -1138,7 +1174,23 @@ $(document).ready(function () {
 		}
 		previousQuote();
 		i--;
-		console.log(m, i);
+	});
+
+	//Tweet Button
+	
+	$(".btn-tweet").click(function () {
+		var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = 'http://twitter.com/share?text=' + x[i-1].quote + " - " + x[i-1].author,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    
+	    window.open(url, 'twitter', opts);
 	});
 
 });
