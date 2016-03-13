@@ -665,6 +665,9 @@ body {
 .home {
   margin: 25px auto 0; }
 
+@media screen and (min-width: 1200px) {
+  #page {
+    height: 100vh; } }
 .hidden {
   display: none; }
 
@@ -672,32 +675,43 @@ a {
   text-decoration: none; }
 
 .headline {
+  font-family: 'Love Ya Like A Sister', cursive;
   font-size: 5em;
   text-align: center; }
 
 .intro {
   font-size: 1.2em; }
 
+.navigation {
+  background-color: #fff; }
+
 .nav-bar {
-  margin: 1.5em 0; }
+  margin: 1.2em 0 0; }
 
 .nav-bar-menu {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 5px;
+  text-align: center; }
 
 .nav-bar-btn {
   display: inline-block; }
 
 .nav-bar-btn span {
-  text-align: center;
-  padding: 0.5em 1.4em;
-  background-color: #333;
+  padding: 0.5em 1.3em;
   text-decoration: none;
   cursor: pointer;
-  color: #1eaedb; }
+  color: #757575;
+  font-weight: 700;
+  font-size: 14px; }
 
 .nav-bar-btn span:hover {
-  color: #1b9cc5;
-  background-color: #555; }
+  color: black; }
+
+.black-bottom-border {
+  border-bottom: 4px solid #333; }
+
+.nav-active {
+  border-bottom: 4px solid #333; }
 
 .grid-cell {
   height: 170px;
@@ -707,16 +721,62 @@ a {
 .title h4 {
   font-size: 1.5em;
   text-align: center;
-  padding-right: 5px;
-  padding-left: 5px;
-  cursor: pointer; }
+  margin: 10px 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #757575; }
+
+h4:hover {
+  background-color: rgba(158, 158, 158, 0.2); }
 
 #row-2 {
   margin-top: 2em; }
 
-.grid-cell img {
-  width: 100%;
+.featured-image {
   height: 100px; }
+
+.featured-image-books {
+  background: url("../images/books.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-relationships {
+  background: url("../images/relationship.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-sports {
+  background: url("../images/sports.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-life {
+  background: url("../images/life.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-movies {
+  background: url("../images/movies.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-startups {
+  background: url("../images/business.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-african {
+  background: url("../images/african.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image-christianity {
+  background: url("../images/bible.jpg") top center no-repeat;
+  background-size: 110%;
+  transition: background 800ms ease-in-out; }
+
+.featured-image:hover {
+  background-size: 100%; }
 
 .grid-cell a {
   color: #333; }
@@ -740,16 +800,122 @@ a {
   margin-top: 2em;
   text-align: center; }
 
+.background-style-sports {
+  background: url("../images/bg-sports.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-relationships {
+  background: url("../images/bg-relationships.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-movies {
+  background: url("../images/bg-movies.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-african {
+  background: url("../images/bg-african.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-startups {
+  background: url("../images/bg-startups.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-christianity {
+  background: url("../images/bg-christianity.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-books {
+  background: url("../images/bg-books.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.background-style-life {
+  background: url("../images/bg-life.jpg") top center no-repeat;
+  background-size: cover;
+  width: 100%;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
 .quotesBox {
-  margin-top: 4em;
-  border: 1px solid #333; }
+  margin-top: 5em;
+  border: 1px solid #333;
+  background-color: #dcdde0; }
 
 blockquote {
   position: relative;
-  margin-top: 1em;
+  margin-top: 2em;
   padding: 30px 60px 70px;
   text-align: center;
-  font-size: 2em; }
+  font-size: 2em;
+  font-family: 'Shadows Into Light Two', cursive; }
 
 blockquote::before, blockquote::after {
   position: absolute;
@@ -774,7 +940,7 @@ blockquote::after {
   float: right;
   bottom: 0;
   right: 0;
-  color: #555;
+  color: #757575;
   font-size: 0.7em; }
 
 @media screen and (max-width: 850px) {
@@ -791,5 +957,22 @@ blockquote::after {
 .cta {
   text-align: center;
   margin: 4em auto 0; }
+
+.btn {
+  margin-left: 15px;
+  color: #fff;
+  box-shadow: 5px 5px 5px transparent; }
+
+.btn-quote, .btn-quote:focus {
+  color: #fff;
+  background-color: #333; }
+
+.btn-quote:hover {
+  color: #fff;
+  background-color: #4d4d4d; }
+
+.btn-tweet {
+  background-color: #22E9FC;
+  color: #4d4d4d; }
 
 /*# sourceMappingURL=style.min.css.map */

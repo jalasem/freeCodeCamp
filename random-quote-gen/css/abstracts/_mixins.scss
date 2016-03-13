@@ -1,0 +1,19 @@
+@mixin bg_image ($section) {
+	background: url('../images/bg-#{$section}.jpg') top center no-repeat;
+	background-size: cover;
+	width: 100%;
+	-webkit-transition-property: background;
+	-moz-transition-property: background;
+	-o-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+}
+
+@mixin featured_image ($section) {
+	background: url("../images/#{$section}.jpg") top center no-repeat;
+	background-size: 110%;
+	transition: background 800ms ease-in-out;
+}

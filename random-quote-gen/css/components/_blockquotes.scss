@@ -1,16 +1,18 @@
 .quotesBox {
-	margin-top: 4em;
-	border: 1px solid #333;
+	margin-top: 5em;
+	border: 1px solid $dark-black;
+	background-color: rgb(220, 221, 224);
 }
 
 //Blockquotes
 
 blockquote {
 	position: relative;
-	margin-top: 1em;
+	margin-top: 2em;
 	padding: 30px 60px 70px;
 	text-align: center;
 	font-size: 2em;
+	font-family: 'Shadows Into Light Two', cursive;
 }
 
 blockquote::before , blockquote::after {
@@ -39,9 +41,11 @@ blockquote::after {
 	float: right;
 	bottom: 0;
 	right: 0;
-	color: #555;
+	color: $light-black;
 	font-size: 0.7em;
 }
+
+//Media Queries
 
 @media screen and (max-width: 850px) {
 	blockquote::before, blockquote::after {

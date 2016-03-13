@@ -1,0 +1,31 @@
+.background-style-sports {
+	@include bg_image ($section: sports);
+}
+
+.background-style-relationships {
+	@include bg_image ($section: relationships);
+}
+
+.background-style-movies {
+	@include bg_image ($section: movies);
+}
+
+.background-style-african {
+	@include bg_image ($section: african);
+}
+
+.background-style-startups {
+	@include bg_image ($section: startups);
+}
+
+.background-style-christianity {
+	@include bg_image ($section: christianity);
+}
+
+.background-style-books {
+	@include bg_image (books);
+}
+
+.background-style-life {
+	@include bg_image (life);
+}

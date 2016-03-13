@@ -4,7 +4,9 @@
 	<title>Random Quote Generator</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link href='https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 <body>
@@ -22,36 +24,28 @@
 		<div class="container" id="quotes-container">
 			<div class="row" id="row-1">
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img7.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-books"></div>
 
 					<div class="title" id="home-books">
 						<h4><span>Book Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img8.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-relationships"></div>
 
 					<div class="title" id="home-relationships">
 						<h4><span>Relationship Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img1.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-sports"></div>
 
 					<div class="title" id="home-sports">
 						<h4><span>Sports Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img2.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-life"></div>
 
 					<div class="title" id="home-life">
 						<h4><span>Life Quotes</span></h4>
@@ -61,36 +55,28 @@
 
 			<div class="row" id="row-2">
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img3.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-movies"></div>
 
-					<div class="title" id="home-movie">
+					<div class="title" id="home-movies">
 						<h4><span>Movie Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img4.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-startups"></div>
 
-					<div class="title" id="home-startup">
+					<div class="title" id="home-startups">
 						<h4><span>Startup Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img5.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-african"></div>
 
 					<div class="title" id="home-african">
 						<h4><span>African Quotes</span></h4>
 					</div>
 				</div>
 				<div class="three columns grid-cell">
-					<div class="featured-image">
-						<img src="images/img6.png" alt="image">
-					</div>
+					<div class="featured-image featured-image-christianity"></div>
 
 					<div class="title" id="home-christianity">
 						<h4><span>Christianity Quotes</span></h4>
@@ -108,57 +94,65 @@
 		
 	</div> <!-- HomePage -->
 	
-	<div class="page hidden">
+	<div class="app">
+
+		<div class="hidden" id="page">
+			
+			<!-- Navigation  -->
 		
-		<!-- Navigation  -->
-
-		<div class="container">
-			<div class="ten columns offset-by-one">
-				<nav class="nav-bar">
-					<ul class="nav-bar-menu">
-						<li class="nav-bar-btn" id="nav-bar-home"><span>Home</span></li>
-						<li class="nav-bar-btn" id="nav-bar-books"><span>Books</span></li>
-						<li class="nav-bar-btn" id="nav-bar-startups"><span>Startups</span></li>
-						<li class="nav-bar-btn" id="nav-bar-relationships"><span>Relationships</span></li>
-						<li class="nav-bar-btn" id="nav-bar-sports"><span>Sports</span></li>
-						<li class="nav-bar-btn" id="nav-bar-movies"><span href="">Movies</span></li>
-						<li class="nav-bar-btn" id="nav-bar-african"><span href="">African</span></li>
-						<li class="nav-bar-btn" id="nav-bar-life"><span href="">Life</span></li>
-						<li class="nav-bar-btn" id="nav-bar-christianity"><span href="">Christianity</span></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-		<!-- End of Navigation -->
-		
-		<!-- Quotes -->
-
-		<div class="container">
-			<div class="ten columns offset-by-one">
-				<div class="quotesBox" id="quotesBox">
-					<blockquote>
-						<span class="quote"></span>
-						<span class="author"></span>
-					</blockquote>
+			<section class="navigation">
+				<div class="container">
+					<div class="ten columns offset-by-one">
+						<nav class="nav-bar">
+							<ul class="nav-bar-menu">
+								<li class="nav-bar-btn" id="nav-bar-home"><span class="nav-bar-btn-span" id="nav-bar-btn-home">Home</span></li>
+								<li class="nav-bar-btn" id="nav-bar-books"><span class="nav-bar-btn-span" id="nav-bar-btn-books">Books</span></li>
+								<li class="nav-bar-btn" id="nav-bar-startups"><span class="nav-bar-btn-span" id="nav-bar-btn-startups">Startups</span></li>
+								<li class="nav-bar-btn" id="nav-bar-relationships"><span class="nav-bar-btn-span" id="nav-bar-btn-relationships">Relationships</span></li>
+								<li class="nav-bar-btn" id="nav-bar-sports"><span class="nav-bar-btn-span" id="nav-bar-btn-sports">Sports</span></li>
+								<li class="nav-bar-btn" id="nav-bar-movies"><span class="nav-bar-btn-span" id="nav-bar-btn-movies">Movies</span></li>
+								<li class="nav-bar-btn" id="nav-bar-african"><span class="nav-bar-btn-span" id="nav-bar-btn-african">African</span></li>
+								<li class="nav-bar-btn" id="nav-bar-life"><span class="nav-bar-btn-span" id="nav-bar-btn-life">Life</span></li>
+								<li class="nav-bar-btn" id="nav-bar-christianity"><span class="nav-bar-btn-span" id="nav-bar-btn-christianity">Christianity</span></li>
+							</ul>
+						</nav>
+					</div>
 				</div>
-			</div>
-		</div>
-		
-		<!-- End of Quotes -->
+			</section>
 
-		<!-- Buttons -->
+			<!-- End of Navigation -->
+			
+			<!-- Quotes -->
 
-		<div class="container">
-			<div class="eight columns offset-by-two">
-				<div class="cta" id="cta">
-					<button class="btn" id="next-quote">Next Quote</button>
-					<button class="btn" id="previous-quote">Previous Quote</button>
-					<button class="btn">Tweet!</button>
+			<section class="main">
+
+				<div class="container">
+					<div class="ten columns offset-by-one">
+						<div class="quotesBox" id="quotesBox">
+							<blockquote>
+								<span class="quote"></span>
+								<span class="author"></span>
+							</blockquote>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
+				
+				<!-- End of Quotes -->
 
+				<!-- Buttons -->
+
+				<div class="container">
+					<div class="eight columns offset-by-two">
+						<div class="cta" id="cta">
+							<button class="btn btn-quote" id="previous-quote">Previous Quote</button>
+							<button class="btn btn-quote" id="next-quote">Next Quote</button>
+							<a class="button btn btn-tweet">Tweet!</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>

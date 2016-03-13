@@ -1,9 +1,16 @@
+.navigation {
+	background-color: #fff;
+	// max-height: 65px;
+}
+
 .nav-bar {
-	margin: 1.5em 0;
+	margin: 1.2em 0 0;
 }
 
 .nav-bar-menu {
 	list-style-type: none;
+	margin-bottom: 5px;
+	text-align: center;
 }			
 
 .nav-bar-btn {
@@ -11,15 +18,23 @@
 }
 
 .nav-bar-btn span {
-	text-align: center;
-	padding: 0.5em 1.4em;
-	background-color: #333;
+	padding: 0.5em 1.3em;
 	text-decoration: none;
 	cursor: pointer;
-	color: $link-color;
+	color: $light-black;
+	font-weight: 700;
+	font-size: 14px;
 }
 
 .nav-bar-btn span:hover {
-	color: darken($link-color, 5%);
-	background-color: #555;
+	color: darken($dark-black, 30%);
+	// border-bottom: 4px solid $dark-black;
+}
+
+.black-bottom-border {
+	border-bottom: 4px solid $dark-black;
+}
+
+.nav-active {
+	border-bottom: 4px solid $dark-black;
 }

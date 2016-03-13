@@ -2,3 +2,24 @@
 	text-align: center;
 	margin: 4em auto 0;
 }
+
+.btn {
+	margin-left: 15px;
+	color: #fff;
+	box-shadow: 5px 5px 5px transparent;
+}
+
+.btn-quote, .btn-quote:focus {
+	color: #fff;
+	background-color: $dark-black;
+}
+
+.btn-quote:hover,  {
+	color: #fff;
+	background-color: lighten($dark-black, 10%);
+}
+
+.btn-tweet {
+	background-color: #22E9FC;
+	color: darken(#fff, 70%);
+}

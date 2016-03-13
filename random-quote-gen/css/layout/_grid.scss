@@ -7,18 +7,58 @@
 .title h4 {
 	font-size: 1.5em;
 	text-align: center;
-	padding-right: 5px;
-	padding-left: 5px;
+	margin: 10px 10px;
+	padding-bottom: 5px;
 	cursor: pointer;
+	color: $light-black;
+}
+
+h4:hover {
+	background-color: rgba(158,158,158,.2);
 }
 
 #row-2 {
 	margin-top: 2em;
 }
 
-.grid-cell img {
-	width: 100%;
+.featured-image {
 	height: 100px;
+}
+
+.featured-image-books {
+	@include featured_image (books);
+}
+
+.featured-image-relationships {
+	@include featured_image (relationship);
+}
+
+.featured-image-sports {
+	@include featured_image (sports);
+}
+
+.featured-image-life {
+	@include featured_image (life);
+}
+
+.featured-image-movies {
+	@include featured_image (movies);
+}
+
+.featured-image-startups {
+	@include featured_image (business);
+}
+
+.featured-image-african {
+	@include featured_image (african);
+}
+
+.featured-image-christianity {
+	@include featured_image (bible);
+}
+
+.featured-image:hover {
+	background-size: 100%;
 }
 
 .grid-cell a {
