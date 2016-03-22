@@ -1,0 +1,52 @@
+//Skeleton CSS Boilerplate
+
+@import "skeleton";
+
+//Base Styles
+
+.main {
+	background-color: #ccc;
+}
+
+	.app {
+		border: 1px solid #333;
+		height: 92vh;
+	}
+
+		.headline {
+			text-align: center;
+			margin-top: 0.5em;
+			padding: 0px 30px;
+		}
+
+		.weather-info {
+			text-align: center;
+		}
+			
+			.animated-icon {
+				width: 200px;
+				height: 200px;
+			}
+
+			.weather-info-text {
+				font-size: 2em;
+			}
+
+		.search-weather {
+			background-color: #473820;
+			text-align: left;
+			position: absolute;
+			margin: 0px auto;
+			padding: 5px 15px;
+			bottom: 0;
+		}
+
+			input[type="search"] {
+				width: 80%;
+			}
+
+.footer {
+	padding-top: 10px;
+	text-align: center;
+	max-height: 8vh;
+}
