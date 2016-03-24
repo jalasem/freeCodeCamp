@@ -9,49 +9,73 @@
 <body>
 	
 	<div class="main">
-
-
 		<div class="container">
 			<div class="app twelve columns">
-				<h1 class="headline">Weather Forecast</h1>
-				<div class="eight columns offset-by-two">
-					<div class="weather-info">
-						<div class="weather-info-animation">
+				<h1 class="headline">Weather Forecast for <span class="location">Lagos</span></h1>
+				
+				<div class="row">
+					<div class="eight columns offset-by-two">
+						<div class="weather-info">
+							<div class="weather-info-animation">
 							<img src="images/sunny.svg" class="animated-icon" alt="sunny">
-						</div>					
-						<div class="weather-info-text">
-							<span class="temperature">29°C</span>
-							<span class="weather-condition">Light rain</span>
+							<!-- <canvas id="clear-day" width="64" height="64"></canvas> -->
 						</div>
-						
-					</div>
+					</div>		
 				</div>
 				
-				<div class="search-weather eight columns offset-by-two">
-					<h3>Find a forecast</h3>
-					<form action="#">
-						<input type="search" placeholder="Search for location or keyword">
-						<button class="btn">Search</button>
-					</form>
+				<div class="row">
+					<div class="eight columns offset-by-two">
+						<div class="weather-info-text">
+							<div class="one-third column">
+								<span class="wind-speed">20mph</span>
+							</div>
+							<div class="one-third column">
+								<span class="temperature">29°C</span> 
+							</div>
+							<div class="one-third column">
+								<span class="weather-condition">Light rain</span>
+							</div>							
+						</div>
+					</div>
+				</div>					
+						
+				<div class="row">
+					<div class="search-weather eight columns offset-by-two">
+						<h3>Find a Forecast</h3>
+						<form action="">
+							<input type="search" placeholder="Search for location or keyword">
+							<button class="btn-search">Search</button>
+						</form>
+					</div>
 				</div>
-	
-			</div>
-		</div>
-		
-		
-		
+			
+				<div class="row">
+					<div class="footer">
+						<p>Designed and coded by <a href="http://ayoisaiah.github.io">Ayo Isaiah</a></p>
+						<p id="longitude"></p>
+						<p id="latitude"></p>
+						<p id="message"></p>
+					</div>
+				</div>			
 
-	</div>
+
+			</div>  <!-- app -->
+		</div> <!-- container -->
+	</div> <!-- main -->
 	
-	<div class="footer">
+	<!-- <section class="attribution">
 		<div class="container">
 			<div class="eight columns offset-by-two">
-				<p>Designed and coded by <a href="http://ayoisaiah.github.io">Ayo Isaiah</a>. Success demands more than code.</p>
-			</div>
-		</div>	
-	</div>
-
+				<div class="footer">
+					<p>Designed and coded by <a href="http://ayoisaiah.github.io">Ayo Isaiah</a></p>
+				</div>
+			</div>	
+		</div>
+	</section> -->
+	
+	
 	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- <script src="js/skycons.js"></script> -->
 	<script src="js/script.js"></script>
 </body>
 </html>

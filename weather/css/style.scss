@@ -1,17 +1,24 @@
+//Variables
+
+$container-width: 1080px;
+
 //Skeleton CSS Boilerplate
 
 @import "skeleton";
 
 //Base Styles
 
-.main {
+body {
 	background-color: #ccc;
 }
 
-	.app {
-		border: 1px solid #333;
-		height: 92vh;
-	}
+.main {
+	height: 100vh;
+}
+	// .app {
+	// 	border: 1px solid #333;
+	// 	// height: 100vh;
+	// }
 
 		.headline {
 			text-align: center;
@@ -26,27 +33,51 @@
 			.animated-icon {
 				width: 200px;
 				height: 200px;
+				margin-bottom: 2em;
 			}
 
 			.weather-info-text {
-				font-size: 2em;
+				text-align: center;
+				font-size: 3em;
+				margin-bottom: 2.3em;
 			}
 
 		.search-weather {
-			background-color: #473820;
+			background-color: #1EAEDB;
 			text-align: left;
-			position: absolute;
 			margin: 0px auto;
 			padding: 5px 15px;
 			bottom: 0;
+		}
+
+		form {
+			margin-bottom: 0;
 		}
 
 			input[type="search"] {
 				width: 80%;
 			}
 
-.footer {
-	padding-top: 10px;
-	text-align: center;
-	max-height: 8vh;
-}
+			button {
+				background-color: #ccc;	
+			}
+
+	.attribution {
+		background-color: #fff;
+	}	
+
+		.footer {
+			padding-top: 20px;
+			text-align: center;
+		}
+
+		.footer p {
+			margin-bottom: 0.5em;
+		}
+
+		.footer a {
+			text-decoration: none;
+		}
+
+
+//Media Queries
