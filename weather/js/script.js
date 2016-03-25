@@ -27,10 +27,12 @@ if (navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(getCurrentLocation);
 	
 
-	}
+	};
 }
 
-else {
-	alert("Geolocation is not supported by your browser")
+//If Geolocation is not supported by the browser, alert the user
+
+else { 
+	alert("Geolocation is not supported by your browser");
 }
 
