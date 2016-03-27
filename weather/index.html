@@ -18,8 +18,7 @@
 					<div class="eight columns offset-by-two">
 						<div class="weather-info">
 							<div class="weather-info-animation">
-							<img src="images/sunny.svg" class="animated-icon" alt="sunny">
-							<!-- <canvas id="clear-day" width="64" height="64"></canvas> -->
+							<canvas id="animated-icon" width="220" height="220"></canvas>
 						</div>
 					</div>		
 				</div>
@@ -28,7 +27,7 @@
 					<div class="eight columns offset-by-two">
 						<div class="weather-info-text">
 							<div class="one-third column">
-								<span class="wind-speed">20mph</span>
+								<span class="local-time">20:00</span>
 							</div>
 							<div class="one-third column">
 								<span class="temperature">29°C</span> 
@@ -43,8 +42,8 @@
 				<div class="row">
 					<div class="search-weather eight columns offset-by-two">
 						<h3>Find a Forecast</h3>
-						<form action="">
-							<input type="search" placeholder="Search for location or keyword">
+						<form id="my-form" action="">
+							<input type="search" placeholder="Search for location or keyword" class="find-forcast">
 							<button class="btn-search">Search</button>
 						</form>
 					</div>
@@ -53,9 +52,6 @@
 				<div class="row">
 					<div class="footer">
 						<p>Designed and coded by <a href="http://ayoisaiah.github.io">Ayo Isaiah</a></p>
-						<p id="longitude"></p>
-						<p id="latitude"></p>
-						<p id="message"></p>
 					</div>
 				</div>			
 
@@ -65,7 +61,7 @@
 	</div> <!-- main -->
 	
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<!-- <script src="js/skycons.js"></script> -->
+	<script src="js/skycons.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
