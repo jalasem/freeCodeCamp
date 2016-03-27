@@ -12,7 +12,8 @@ $container-width-larger-than-phablet: 95%;
 //Base Styles
 
 body {
-	background-color: #F1C40F;
+	background-color: #0F5474;
+	color: #FFFAFF;
 }
 
 //
@@ -25,6 +26,8 @@ body {
 			text-align: center;
 			margin-top: 0.5em;
 			padding: 0px 30px;
+			font-weight: 700;
+			font-family: 'Lato', sans-serif;
 		}
 
 		.weather-info {
@@ -45,12 +48,18 @@ body {
 			}
 
 		.search-weather {
-			background-color: #FF5900;
+			background-color: #B0CF00;
+			color: #333;
 			text-align: left;
 			margin: 15px auto 0;
 			padding: 5px 15px;
 			bottom: 0;
 		}
+
+			.search-weather h3 {
+				color: #003B2B;
+				font-weight: 700;
+			}
 
 		form {
 			margin-bottom: 0;
@@ -61,8 +70,12 @@ body {
 			}
 
 			button {
-				background-color: #333;
+				background-color: #003B2B;
 				color: #FFFAFF;	
+			}
+
+			button:hover {
+				color: #B0CF00;
 			}
 
 	.attribution {
@@ -76,10 +89,11 @@ body {
 
 		.footer p {
 			margin-bottom: 0.5em;
+			color: #fff;
 		}
 
 		.footer a {
-			color: #333;
+			color: #B0CF00;
 		}
 
 

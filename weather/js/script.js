@@ -1,6 +1,6 @@
 //Skycons
 
-var skycons = new Skycons({"color": "black"});
+var skycons = new Skycons({"color": "#FFFAFF"});
 
 skycons.add("animated-icon", Skycons.CLEAR_DAY);
 
