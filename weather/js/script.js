@@ -32,12 +32,13 @@ function updateWeather (json) {
 
 	$(".weather-condition").html(json.weather[0].description);
 	var temp = [(json.main.temp - 273.15).toFixed(0) + "°C", (1.8 * (json.main.temp - 273.15) + 32).toFixed(0) + "F"];
-	$(".temperature").html((json.main.temp - 273.15).toFixed(0) + "°C");
-	// setInterval(function () {
-	// 	var i = 0;
-	// 	$(".temperature").html(temp[1]);
-	// }, 2000);
-	$(".location").html(json.name);
+	$(".temp-celsius").html(temp[0]);
+	$(".temp-fahrenheit").html(temp[1]);
+	$(".temperature").click(function () {
+		$(".temp-celsius").toggle();
+		$(".temp-fahrenheit").toggle();
+	});
+	$(".location").html("for " + json.name);
 
 	//Update Weather animation based on the returned weather description
 
@@ -126,6 +127,6 @@ if (navigator.geolocation) {
 //If Geolocation is not supported by the browser, alert the user
 
 else { 
-	alert("Geolocation is not supported by your browser");
+	alert("Geolocation is not supported by your browser. Download the latest Firefox or Chrome to use this app");
 }
 

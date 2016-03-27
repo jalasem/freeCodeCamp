@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Weather Forecast</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
 	<div class="main">
 		<div class="container">
 			<div class="app twelve columns">
-				<h1 class="headline">Weather Forecast for <span class="location">Lagos</span></h1>
+				<h1 class="headline">Weather Forecast <span class="location"></span></h1>
 				
 				<div class="row">
 					<div class="eight columns offset-by-two">
@@ -28,13 +29,16 @@
 					<div class="eight columns offset-by-two">
 						<div class="weather-info-text">
 							<div class="one-third column">
-								<span class="local-time">20:00</span>
+								<span class="local-time">~~:~~</span>
 							</div>
 							<div class="one-third column">
-								<span class="temperature">29°C</span> 
+								<div class="temperature">
+									<span class="temp-celsius">°C</span>
+									<span class="temp-fahrenheit hidden">F</span>
+								</div> 
 							</div>
 							<div class="one-third column">
-								<span class="weather-condition">Light rain</span>
+								<span class="weather-condition">~~~~</span>
 							</div>							
 						</div>
 					</div>
