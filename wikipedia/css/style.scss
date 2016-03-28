@@ -1,0 +1,55 @@
+//Variables
+
+$container-width: 1140px;
+
+//Import Skeleton
+
+@import "skeleton";
+
+//Homepage Styles
+
+body {
+	background-color: #ccc;
+}
+
+	.home {
+		margin-top: 14em;
+		text-align: center;	
+	}
+
+		.wiki-search-form {
+			margin: 1.5em 0; 
+		}
+
+			.wiki-search-input {
+				width: 100%;
+			}
+
+//Search Results Page Styles
+	
+	.header {
+		padding: 10px 0;
+		height: 59px;
+		border-bottom: 1px solid #333; 
+	}
+
+		.header h1 {
+			float: right;
+			display: inline-block;
+		}
+
+		.result-wiki-search-form {
+			display: inline-block;
+			margin: 10px 0 0;
+		}
+
+			.result-wiki-search-form-input {
+				width: 350px;
+			}
+
+	
+//
+
+.hidden {
+	display: none;
+}
