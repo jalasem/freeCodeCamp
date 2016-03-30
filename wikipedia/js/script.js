@@ -1,5 +1,11 @@
 window.onload = function() {
     document.getElementById("wiki-search-input").focus();
+    var string = "ABCDEFGHIJKLMONPQRSTUVWXYZ "; //65 - 90, space = 32
+    var number = "123456789"; //49-57
+    string = string.toLowerCase(); //97 - 122
+    console.log(string.charCodeAt(26));
+    console.log(number.charCodeAt(8));
+    console.log(String.fromCharCode(91, 92, 93, 94, 95, 96));
 };
 
 $(".wiki-search-input").keypress(function() {
@@ -40,7 +46,7 @@ $(".btn-wiki").click(function(event) {
 function showResults (callback) {
 
 	for (var i = 0; i <= 9; i++) {
-	$(".display-results").append("<div class='result-list result-" + i + "'>" + "<span class='result-title title-" + i + "'></span>" + "<br>" +"<span class='result-snippet snippet-" + i + "'></span>" + "<br>" + "<span class='result-metadata metadata-" + i + "'></span>" + "</div>" );
+		$(".display-results").append("<div class='result-list result-" + i + "'>" + "<span class='result-title title-" + i + "'></span>" + "<br>" +"<span class='result-snippet snippet-" + i + "'></span>" + "<br>" + "<span class='result-metadata metadata-" + i + "'></span>" + "</div>" );
 	}
 
 	for (var m = 0; m <= 9; m++) {

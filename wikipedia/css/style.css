@@ -660,7 +660,7 @@ form {
   margin-bottom: 2.5rem; }
 
 body {
-  background-color: #ccc; }
+  background-color: #fff; }
 
 .home {
   margin-top: 14em;
@@ -669,23 +669,25 @@ body {
 .wiki-search-form {
   margin: 1.5em 0; }
 
-.wiki-search-input {
+#wiki-search-input {
   width: 100%; }
 
 .header {
-  padding: 10px 0;
-  height: 59px;
+  background-color: #EDEDED;
+  padding: 5px 0;
+  max-height: 59px;
   border-bottom: 1px solid #333; }
 
 .header h1 {
   float: right;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 45px; }
 
 .result-wiki-search-form {
   display: inline-block;
   margin: 10px 0 0; }
 
-.result-wiki-search-form-input {
+#result-wiki-search-form-input {
   width: 350px; }
 
 .result-list {

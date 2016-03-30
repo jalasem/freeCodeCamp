@@ -9,7 +9,7 @@ $container-width: 1140px;
 //Homepage Styles
 
 body {
-	background-color: #ccc;
+	background-color: #fff;
 }
 
 	.home {
@@ -21,21 +21,23 @@ body {
 			margin: 1.5em 0; 
 		}
 
-			.wiki-search-input {
+			#wiki-search-input {
 				width: 100%;
 			}
 
 //Search Results Page Styles
 	
 	.header {
-		padding: 10px 0;
-		height: 59px;
+		background-color: #EDEDED;
+		padding: 5px 0;
+		max-height: 59px;
 		border-bottom: 1px solid #333; 
 	}
 
 		.header h1 {
 			float: right;
 			display: inline-block;
+			font-size: 45px;
 		}
 
 		.result-wiki-search-form {
@@ -43,7 +45,7 @@ body {
 			margin: 10px 0 0;
 		}
 
-			.result-wiki-search-form-input {
+			#result-wiki-search-form-input {
 				width: 350px;
 			}
 	
@@ -73,6 +75,7 @@ body {
 			.searchmatch {
 				font-weight: bold;
 			}
+
 		.result-metadata {
 			color: #078307;
 		}
