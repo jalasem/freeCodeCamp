@@ -688,6 +688,27 @@ body {
 .result-wiki-search-form-input {
   width: 350px; }
 
+.result-list {
+  margin-top: 20px; }
+
+.result-title a {
+  color: #2619AF;
+  line-height: 1.2em;
+  font-size: 18px;
+  text-decoration: none; }
+
+.result-title a:hover {
+  text-decoration: underline; }
+
+.result-title a:visited {
+  color: #670199; }
+
+.searchmatch {
+  font-weight: bold; }
+
+.result-metadata {
+  color: #078307; }
+
 .hidden {
   display: none; }
 
