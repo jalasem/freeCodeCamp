@@ -1,47 +1,29 @@
 window.onload = function() {
     document.getElementById("wiki-search-input").focus();
-    var string = "ABCDEFGHIJKLMONPQRSTUVWXYZ "; //65 - 90, space = 32
-    var number = "123456789"; //49-57
-    string = string.toLowerCase(); //97 - 122
-    console.log(string.charCodeAt(26));
-    console.log(number.charCodeAt(8));
-    console.log(String.fromCharCode(91, 92, 93, 94, 95, 96));
 };
 
-$(".wiki-search-input").keypress(function() {
-	var key = $(".wiki-search-input").val();
-	$(".result-wiki-search-form-input").val(key);
-	$(".home").addClass('hidden');
-	$(".result").removeClass('hidden');
-	document.getElementById("wiki-search-input").blur();
-	document.getElementById("result-wiki-search-form-input").focus();	
-	$(".wiki-search-input").val("");
-});
-
-$(".btn-wiki").click(function(event) {
-	event.preventDefault();
-	document.getElementById("result-wiki-search-form-input").blur();	
-	var keyword = $(".result-wiki-search-form-input").val();
-	$(".display-results").html("");
-
-	$.ajax({ //AJAX request
+function ajax (keyword) { //AJAX request
+	$.ajax({ 
 		url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + keyword + "&prop=info&inprop=url&utf8=&format=json",
 		dataType: "jsonp",
 		data: {
 			format: "json"
 		},
 		success: function(response) {
-			console.log(response);
-			console.log(response.query.search[0].title);
-			console.log(response.query.search[0].snippet);
-			showResults(response);
+			console.log(response.query);
+			if (response.query.searchinfo.totalhits === 0) {
+				showError(keyword);
+			}
+
+			else {
+				showResults(response);
+			}
 		},
 		error: function () {
 			alert("Error retrieving search results, please refresh the page");
 		}
 	});
-
-});
+}
 
 function showResults (callback) {
 
@@ -60,5 +42,37 @@ function showResults (callback) {
 		$(".snippet-" + m).html(callback.query.search[m].snippet);
 		$(".metadata-" + m).html((callback.query.search[m].size/1000).toFixed(0) + "kb (" + callback.query.search[m].wordcount + " words) - " + timestamp);
 	}
-	
 }
+
+function showError(keyword) {
+	$(".display-results").append( "<div class='error'> <p>Your search <span class='keyword'>" + keyword + "</span> did not match any documents.</p> <p>Suggestions:</p><li>Make sure that all words are spelled correctly.</li><li>Try different keywords.</li><li>Try more general keywords.</li></div> ");
+}
+
+$(".result-btn-wiki").click(function (event) {
+	event.preventDefault();
+	$(".display-results").html("");
+	var keyword = $(".result-wiki-search-form-input").val();
+	document.getElementById("result-wiki-search-form-input").blur();
+	ajax(keyword);
+});
+
+$(".btn-wiki").click(function(event) {
+	event.preventDefault();
+	var keyword = $(".wiki-search-input").val();
+
+	if (keyword !== "") {
+		$(".result-wiki-search-form-input").val(keyword);
+		$(".home").addClass('hidden');
+   	 	$(".result").removeClass('hidden');
+    	document.getElementById("wiki-search-input").blur();
+   		$(".wiki-search-input").val("");
+		document.getElementById("result-wiki-search-form-input").blur();	
+		$(".display-results").html("");
+		ajax(keyword);
+	}
+
+	else {
+		alert("Enter a keyword into the search box");
+	}
+	
+});
