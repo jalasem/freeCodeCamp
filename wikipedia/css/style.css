@@ -659,8 +659,12 @@ ol,
 form {
   margin-bottom: 2.5rem; }
 
+/*Custom Styles Start Here*/
 body {
   background-color: #fff; }
+
+h1 {
+  font-family: 'Montserrat', sans-serif; }
 
 .home {
   margin-top: 13em;
@@ -678,8 +682,8 @@ body {
 
 .header {
   background-color: #EDEDED;
-  padding: 5px 0;
-  border-bottom: 1px solid #333; }
+  padding: 5px 0 0;
+  border-bottom: 1px solid #999; }
 
 .header h1 {
   display: inline-block;
@@ -707,6 +711,9 @@ body {
 
 .result-title a:visited {
   color: #670199; }
+
+.result-snippet {
+  color: #545454; }
 
 .searchmatch {
   font-weight: bold; }

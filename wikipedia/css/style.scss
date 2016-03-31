@@ -6,10 +6,14 @@ $container-width: 1140px;
 
 @import "skeleton";
 
-//Homepage Styles
+/*Custom Styles Start Here*/
 
 body {
 	background-color: #fff;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
 }
 
 	.home {
@@ -34,9 +38,8 @@ body {
 	
 	.header {
 		background-color: #EDEDED;
-		padding: 5px 0;
-		// max-height: 59px;
-		border-bottom: 1px solid #333;
+		padding: 5px 0 0;
+		border-bottom: 1px solid #999;
 	}
 
 		.header h1 {
@@ -75,9 +78,8 @@ body {
 		}
 		
 		.result-snippet {
-
-		}
-		
+			color: #545454;
+		}			
 			.searchmatch {
 				font-weight: bold;
 			}
