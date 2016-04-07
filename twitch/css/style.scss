@@ -6,16 +6,23 @@ $container-width: 660px;
 
 body {
 	text-align: center;
+	background-color: #ECF0E7;
 }
 
 	.app {
 		margin: 1em 0;
 		border: 1px solid #333;
 		overflow: hidden;
-	}
+		background-color: #fff;
+	}	
+
+		.headline {
+			padding: 10px 0;
+			border-bottom: 1px solid #efefef;
+		}
 
 		.status {
-			padding-top: 20px;
+			padding-top: 10px;
 			padding-bottom: 10px;
 			border-bottom: 1px solid #efefef;
 		}
@@ -25,6 +32,10 @@ body {
 			}
 
 		.twitch {
+			//Overide Skeleton defaults
+			.one-third.column     { width: grid-column-width(3);  }
+			.two-thirds.column    { width: grid-column-width(9);  }
+
 			text-align: left;
 			margin-top: 0.3em;
 			background-color: #ccc;
@@ -44,6 +55,7 @@ body {
 			}
 
 			span {
+				font-size: 16px;
 				display: inline-block;
 				vertical-align: middle;
 				line-height: normal;
@@ -62,6 +74,6 @@ body {
 	}
 
 	span {
-		padding: 0 10px;
+		padding: 10px 10px;
 	}
 }

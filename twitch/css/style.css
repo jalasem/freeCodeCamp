@@ -660,15 +660,21 @@ form {
   margin-bottom: 2.5rem; }
 
 body {
-  text-align: center; }
+  text-align: center;
+  background-color: #ECF0E7; }
 
 .app {
   margin: 1em 0;
   border: 1px solid #333;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #fff; }
+
+.headline {
+  padding: 10px 0;
+  border-bottom: 1px solid #efefef; }
 
 .status {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #efefef; }
 
@@ -681,6 +687,10 @@ button {
   background-color: #ccc;
   border-left: 10px solid #67D25B;
   line-height: 70px; }
+  .twitch .one-third.column {
+    width: 22%; }
+  .twitch .two-thirds.column {
+    width: 74%; }
 
 .image-holder {
   width: 55px;
@@ -693,6 +703,7 @@ button {
   border-radius: 50%; }
 
 span {
+  font-size: 16px;
   display: inline-block;
   vertical-align: middle;
   line-height: normal; }
@@ -706,6 +717,6 @@ span {
     float: none; }
 
   span {
-    padding: 0 10px; } }
+    padding: 10px 10px; } }
 
 /*# sourceMappingURL=style.css.map */
