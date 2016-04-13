@@ -6,9 +6,6 @@ function ajax (keyword) { //AJAX request
 	$.ajax({ 
 		url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=" + keyword + "&prop=info&inprop=url&utf8=&format=json",
 		dataType: "jsonp",
-		data: {
-			format: "json"
-		},
 		success: function(response) {
 			console.log(response.query);
 			if (response.query.searchinfo.totalhits === 0) {
@@ -33,12 +30,12 @@ function showResults (callback) {
 
 	for (var m = 0; m <= 9; m++) {
 		var title = callback.query.search[m].title;
-		title = title.replace(/ /g, "_");
+		var url = title.replace(/ /g, "_");
 		var timestamp = callback.query.search[m].timestamp;
 		timestamp = new Date(timestamp);
 		//"Wed Aug 27 2014 00:27:15 GMT+0100 (WAT)";
 		console.log(timestamp);
-		$(".title-" + m).html("<a href='https://en.wikipedia.org/wiki/" + title + "' target='_blank'>" + callback.query.search[m].title + "</a>");
+		$(".title-" + m).html("<a href='https://en.wikipedia.org/wiki/" + url + "' target='_blank'>" + callback.query.search[m].title + "</a>");
 		$(".snippet-" + m).html(callback.query.search[m].snippet);
 		$(".metadata-" + m).html((callback.query.search[m].size/1000).toFixed(0) + "kb (" + callback.query.search[m].wordcount + " words) - " + timestamp);
 	}
