@@ -681,11 +681,19 @@ body {
 button {
   width: 80%; }
 
+.online .twitch {
+  border-left: 10px solid #67D25B; }
+
+.offline .twitch {
+  border-left: 10px solid #CC0000; }
+
+.unavailable .twitch {
+  border-left: 10px solid #002552; }
+
 .twitch {
   text-align: left;
   margin-top: 0.3em;
   background-color: #ccc;
-  border-left: 10px solid #67D25B;
   line-height: 70px; }
   .twitch .one-third.column {
     width: 22%; }
@@ -718,5 +726,7 @@ span {
 
   span {
     padding: 10px 10px; } }
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
