@@ -692,8 +692,8 @@ button {
 
 .twitch {
   text-align: left;
-  margin-top: 0.3em;
-  background-color: #ccc;
+  margin-top: 0.2em;
+  background-color: #efefef;
   line-height: 70px; }
   .twitch .one-third.column {
     width: 22%; }
@@ -716,6 +716,12 @@ span {
   vertical-align: middle;
   line-height: normal; }
 
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
 @media screen and (max-width: 550px) {
   .twitch {
     text-align: center; }
@@ -728,5 +734,8 @@ span {
     padding: 10px 10px; } }
 .hidden {
   display: none; }
+
+.focus {
+  background-color: #666; }
 
 /*# sourceMappingURL=style.css.map */

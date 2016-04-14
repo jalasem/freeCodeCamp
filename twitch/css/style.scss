@@ -6,6 +6,8 @@ $container-width: 660px;
 	border-left: 10px solid $color;
 }
 
+$light-gray: #efefef;
+
 //
 
 body {
@@ -22,13 +24,13 @@ body {
 
 		.headline {
 			padding: 10px 0;
-			border-bottom: 1px solid #efefef;
+			border-bottom: 1px solid $light-gray;
 		}
 
 		.status {
 			padding-top: 10px;
 			padding-bottom: 10px;
-			border-bottom: 1px solid #efefef;
+			border-bottom: 1px solid $light-gray;
 		}
 
 			button {
@@ -53,11 +55,10 @@ body {
 				.two-thirds.column    { width: grid-column-width(9);  }
 
 				text-align: left;
-				margin-top: 0.3em;
-				background-color: #ccc;
+				margin-top: 0.2em;
+				background-color: $light-gray;
 				line-height: 70px;
 			}
-
 
 				.image-holder {
 					width: 55px;
@@ -76,6 +77,14 @@ body {
 					vertical-align: middle;
 					line-height: normal;
 				}
+
+					a {
+						text-decoration: none;
+					}
+
+					a:hover {
+						text-decoration: underline;
+					}
 
 // Media Queries
 
@@ -98,4 +107,8 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.focus {
+	background-color: #666;
 }
