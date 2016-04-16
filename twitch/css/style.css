@@ -670,6 +670,9 @@ body {
   background-color: #fff; }
 
 .headline {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
   padding: 10px 0;
   border-bottom: 1px solid #efefef; }
 
@@ -682,13 +685,13 @@ button {
   width: 80%; }
 
 .online .twitch {
-  border-left: 10px solid #67D25B; }
+  background-color: #2ECC71; }
 
 .offline .twitch {
-  border-left: 10px solid #CC0000; }
+  background-color: #F1C40F; }
 
 .unavailable .twitch {
-  border-left: 10px solid #002552; }
+  background-color: #3498DB; }
 
 .twitch {
   text-align: left;
@@ -706,7 +709,7 @@ button {
   margin: 7.5px 10px;
   border: 1px solid #222;
   float: left;
-  background: url("../images/placeholder-2.jpg");
+  background: url("https://cdn.rawgit.com/ayoisaiah/freeCodeCamp/master/twitch/images/placeholder-2.jpg");
   background-size: cover;
   border-radius: 50%; }
 
@@ -717,9 +720,11 @@ span {
   line-height: normal; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #196090; }
 
 a:hover {
+  color: #196090;
   text-decoration: underline; }
 
 @media screen and (max-width: 550px) {
@@ -736,6 +741,10 @@ a:hover {
   display: none; }
 
 .focus {
-  background-color: #666; }
+  background-color: #7550BA;
+  color: #fff; }
+
+.focus:hover, .focus:focus {
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

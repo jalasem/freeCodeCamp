@@ -2,11 +2,11 @@ $container-width: 660px;
 
 @import "skeleton";
 
-@mixin border ($color) {
-	border-left: 10px solid $color;
-}
-
 $light-gray: #efefef;
+
+@mixin bgcolor ($color) {
+	background-color: $color;
+}
 
 //
 
@@ -23,6 +23,9 @@ body {
 	}	
 
 		.headline {
+			font-family: "Ubuntu", sans-serif;
+			font-weight: 900;
+			text-transform: uppercase;
 			padding: 10px 0;
 			border-bottom: 1px solid $light-gray;
 		}
@@ -38,15 +41,15 @@ body {
 			}
 
 		.online .twitch {
-			@include border(#67D25B);
+			@include bgcolor (#2ECC71);
 		}
 
 		.offline .twitch {
-			@include border(#CC0000);
+			@include bgcolor (#F1C40F);
 		}
 
 		.unavailable .twitch {	
-			@include border(#002552);
+			@include bgcolor (#3498DB);
 		}
 
 			.twitch {
@@ -66,7 +69,7 @@ body {
 					margin: 7.5px 10px;
 					border: 1px solid #222;
 					float: left;
-					background: url("../images/placeholder-2.jpg");
+					background: url("https://cdn.rawgit.com/ayoisaiah/freeCodeCamp/master/twitch/images/placeholder-2.jpg");
 					background-size: cover;
 					border-radius: 50%;
 				}
@@ -80,9 +83,11 @@ body {
 
 					a {
 						text-decoration: none;
+						color: darken(#3498DB, 20%);
 					}
 
 					a:hover {
+						color: darken(#3498DB, 20%);
 						text-decoration: underline;
 					}
 
@@ -110,5 +115,10 @@ body {
 }
 
 .focus {
-	background-color: #666;
+	background-color: #7550BA;
+	color: #fff;
+}
+
+.focus:hover, .focus:focus {
+	color: #fff;
 }
