@@ -1,14 +1,34 @@
 window.onload = function () {
-	var username, url, picture, x = 0;
+	var status, url, picture, x = 0;
 	var twitchStreamers = ["dreamhackcs", "skyzhar", "freecodecamp", "faceittv", "comster404", "brunofin", "terakilobyte", "robotcaleb", "sheevergaming", "esl_sc2", "ogamingsc2", "jacksofamerica"];
+
+	function updateOfflineUsers () { //If users are offline, make new ajax request to find user info
+		$.ajax({
+			url: "https://api.twitch.tv/kraken/channels/" + url,
+			dataType: "jsonp",
+			data: {format: "json"},
+			success: function (json) {
+				status = "Channel " + "'<a href='" + json.url + "' target='_blank'" + "'>" + json.display_name + "</a>'" + " is currently offline";
+				if (json.logo !== null) {
+					picture = 'url("' + json.logo + '")';
+				}
+
+				else {
+					picture = 'url("https://cdn.rawgit.com/ayoisaiah/freeCodeCamp/master/twitch/images/placeholder-2.jpg")';
+				}
+
+				updateHTML(".offline");
+			}
+		});
+	}
 
 	for (var i = 0; i < twitchStreamers.length; i++) {
 		ajax();
 	}
 
-	function appendDiv (section) {
-		$(section).append('<div class="twitch"><div class="row"><div class="one-third column"><div class="image-holder" id="user-image-' + x + '"></div></div><div class="two-thirds column"><span>' + username + '</span></div></div></div>');		
-		if (section == ".online") { //If users are online, load profile images
+	function updateHTML (section) {
+		$(section).append('<div class="twitch"><div class="row"><div class="one-third column"><div class="image-holder" id="user-image-' + x + '"></div></div><div class="two-thirds column"><span>' + status + '</span></div></div></div>');		
+		if (section == ".online" || section == ".offline") { //If users are online or offline, load profile images
 			$("#user-image-" + x).css({
 				background: picture,
 				'background-size': '55px'
@@ -29,16 +49,14 @@ window.onload = function () {
 
 				if (data.stream === null) {
 					url = data._links.channel.substr(38);
-					console.log(data);
-					username = "Channel " + "'<a href='https://twitchtv.com/" + url + "' target='_blank'" + "'>" + url+ "</a>'" + " is currently offline"; //https://api.twitch.tv/kraken/channels/
-					appendDiv(".offline");
+					updateOfflineUsers();
 				}
 
 				else if (data.status == 422) {
-					username = data.message;
+					status = data.message;
 					console.log(data);
 					console.log(data.message);
-					appendDiv(".unavailable");
+					updateHTML(".unavailable");
 				}
 
 				else {
@@ -46,9 +64,9 @@ window.onload = function () {
 					picture = 'url("' + data.stream.channel.logo + '")';
 					console.log(picture);
 					url = data._links.channel.substr(38);
-					username = "<a href='https://twitchtv.com/" + url + "' target='_blank'" + "'>" + data.stream.channel.display_name +  "</a>" + " is currently streaming " + data.stream.game;
-					console.log(username);
-					appendDiv(".online");
+					status = "<a href='https://twitch.tv/" + url + "' target='_blank'" + "'>" + data.stream.channel.display_name +  "</a>" + " is currently streaming " + data.stream.game;
+					console.log(status);
+					updateHTML(".online");
 				}
 			},
 
